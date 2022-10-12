@@ -64,5 +64,10 @@ def main():
     plt.xlabel('lag time $t$')
     print(tp.utils.fit_powerlaw(em))
     
+    #fordeling av D
+    nim=im.values.tolist()
+    new_im=nim[np.logical_not(np.isnan(nim))] #denna funker ikke
+    print(new_im)
+    
 if __name__ == "__main__":
     main()
